@@ -41,3 +41,19 @@
 | Postconditions | User’s email address information is now able to used when sending confirmation details                         |
 | Main Course    | System prompts the user to enter their email. User inputs the email System temporarily stores user information |
 
+| Name           | Specify item                                                                                                                                    |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| ID             | uc04                                                                                                                                            |
+| Description    | The user specifies the item and that they are looking to purchase                                                                               |
+| Triggers       | Opening the app                                                                                                                                 |
+| Postconditions | The item is now the target of the purchase to come                                                                                              |
+| Main Course    | System prompts the user to enter the specified item. User fills out all of the necessary information System temporarily stores user information |
+
+| Name              | Make purchase                                                                               |
+|-------------------|---------------------------------------------------------------------------------------------|
+| ID                | uc05                                                                                        |
+| Description       | Using the previously acquired information, the system attempts a purchase of the item       |
+| Triggers          | Opening the app                                                                             |
+| Postconditions    | The item in question is now purchased and the user is sent confirmation via email           |
+| Main Course       | System makes a purchase of the user’s item of choice. *AC1                                  |
+| Alternate Courses | AC1 System is unable to purchase System notifies user that the purchase does not go through |
