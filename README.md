@@ -5,7 +5,7 @@ This is Delano Powell's Repository for the individual semester project for Softw
 >*The purpose of this system is to be able to make a very quick purchase, with particular focus being pointed at purchasing footwear. Not intended to be a “catch-all," being able to hit any site, but this project is aimed at implementing a system that allows for a purchase of a shoe from some specific site not yet determined*
 > - *`(Site to be chosen at another point in the project. Cite: Recent Nike news may prompt more security things to jump over)`*
 
-**_Requirements_**: 
+### Requirements: 
 1. Users should be able to enter necessary information:
     - Their payment/billing information
     - Their shipping information
