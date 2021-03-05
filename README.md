@@ -57,3 +57,21 @@
 | Postconditions    | The item in question is now purchased and the user is sent confirmation via email           |
 | Main Course       | System makes a purchase of the user’s item of choice. *AC1                                  |
 | Alternate Courses | AC1 System is unable to purchase System notifies user that the purchase does not go through |
+
+### SPMP *(Software Project Management Plan)*
+<details>
+  <summary>Contents</summary>
+    
+  1. Introduction
+  2. Project Organization
+  3. Managerial Process
+  4. Technical Process
+  5. Description of Work Packages
+  
+</details>
+
+#### Introduction
+#### Project Organization
+#### Managerial Process
+#### Technical Process
+#### Description of Work Packages
