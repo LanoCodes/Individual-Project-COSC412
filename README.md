@@ -62,11 +62,11 @@
 <details>
   <summary>Contents</summary>
     
-  1. Introduction
-  2. Project Organization
-  3. Managerial Process
-  4. Technical Process
-  5. Description of Work Packages
+  1. [Introduction](https://github.com/LanoCodes/Individual-Project-COSC412/blob/main/README.md#introduction)
+  2. [Project Organization](https://github.com/LanoCodes/Individual-Project-COSC412/blob/main/README.md#project-organization)
+  3. [Managerial Process](https://github.com/LanoCodes/Individual-Project-COSC412/blob/main/README.md#managerial-process)
+  4. [Technical Process](https://github.com/LanoCodes/Individual-Project-COSC412/blob/main/README.md#technical-process)
+  5. [Description of Work Packages](https://github.com/LanoCodes/Individual-Project-COSC412/blob/main/README.md#description-of-work-packages)
   
 </details>
 
