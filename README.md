@@ -71,7 +71,12 @@
 </details>
 
 #### Introduction
+
 #### Project Organization
+
 #### Managerial Process
+
 #### Technical Process
+
 #### Description of Work Packages
+
