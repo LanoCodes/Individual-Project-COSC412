@@ -48,30 +48,27 @@
 
 #### Introduction
 1. Project Overview
->The purpose of this system is to be able to take the fuss out of picking a new place to ea and give the user a restaurant nearby that they "must" go to. It will not allow the user to choose any preferences about the restaurant beforehand, such as the type of food served, whether or not it has a bar, etc. Instead, the user's location will be determined, or the user will specify a city and and have a restaurant be picked for them.
+>The purpose of this system is to be able to take the fuss out of picking a new place to eat and give the user a restaurant nearby that they "must" go to, i.e. Roulette. It will not allow the user to choose any preferences about the restaurant beforehand, such as the type of food served, whether or not it has a bar, etc. Instead, the user's location will be determined, or the user will specify a city and and have a restaurant be picked for them.
 2. Project Deliverables
-- All items to be delivered, including delivery dates and location
-- Items to be delivered:
+- All items to be delivered:
     -  Class Diagram
     -  Use Cases
     -  Tool Rundown
-    -  Cost(s) to build
 3. Evolution of the SPMP
 - Should the system be a success and more features/pivots in function become wanted:
-    -  
+    -  The plan will than be reworked and then be based on an already running system, rather than as a project being built from the ground up
 - If costs to run/host/test project becomes exorbitant:
-    -  Update professor immediately and seek alternative demonstration methods to alleviate burden. Though, being the GitHub offers the ability to host projects, this may not be a major concern.
+    -  Update professor immediately and seek alternative demonstration methods to alleviate burden. GitHub offers the ability to host projects, so this may not be a major concern. However, should this occur a reworking of the project plan will need to be done accommodate this.
   
 
 4. Reference Materials 
-- Tentative:
-    -  Reference link to any possible python library
-    -  Reference links to selenium
-    -  Reference links to any project guides used
+- [Yelp's development portal](https://www.yelp.com/developers)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 5. Definition and Acronyms
 - SPMP: Software Project Management Plan
 - “The System”: Refers to the piece of software we intend to build
+- API: Application Programming Interface
 
 #### Project Organization
 1. Process Model
@@ -79,13 +76,13 @@
     - ![Agile Development Diagram](https://user-images.githubusercontent.com/69657272/112192422-4fee9080-8bdd-11eb-8f2e-a64335fce865.png)
 
 2. Organizational Structure
-- Delano Powell, student, is the one in charge project facets. 
+- Delano Powell, student, is in charge of all project facets. 
   - Reports to course professor, as this project is in development on assignment for school
-- General Project oversight comes from the Professor
+- General project oversight comes from the Professor
 
 3. Organizational Interfaces
-- GitHub 
-  - GihHub is the proposed hosting service 
+- GitHub:
+  - GitHub is the proposed hosting service version control service
 - Yelp
   -  Yelp is the provider for the API that will be used for the core of this project
 
@@ -95,15 +92,18 @@
 #### Managerial Process
 1. Management Objectives
 - Management Philosophy:
-    - Committed to doing the best job possible in the time allotted
+    - Commit to doing the best job possible in the time allotted
     - Personal accountability should be the root of everything done throughout the project
     - Meet mistakes/errors often as necessary, early.
 
 2.  Assumptions, Dependencies, and Constraints
   - Constraints:
-    - There will be limit on how many times the app will be able to run using my personal credentials when the app is live. However, the amount of people exposed to this app will likely only spread to everyone in class at most. That is well within range for demonstration.
+    - There will be a limit on how many times the app will be able to run using my personal credentials when the app is live. However, the amount of people exposed to this app will only encompass class participants at most. That is well within range for demonstration.
   - Dependencies: 
     - The app is entirely dependent on Yelp's Fusion API. Should that crash/fail, there will bbe no alternative.
+  - Assumptions:
+    - Yelp's Fusion API will not make a drastic change to their restaurant endpoints
+      -  They have remained stable for some time
 
 3. Risk Management
 - Scope Creep:
@@ -111,10 +111,10 @@
 
 4. Monitoring and Controlling Mechanisms
 - Gantt Chart:
-  -  The Gantt Chart for this project will be the primary mode of tracking progress and controlling development rate
+  -  The [Gantt Chart]() for this project will be the primary mode of tracking progress and controlling development rate
 
 5. Staffing Plan
-- As mentioned, all positions relevant to this project is the sold responsibility of Delano Powell
+- As mentioned, all positions relevant to this project is the sole responsibility of Delano Powell
   -  Staff total: 1
     -  Staff: Delano Powell
 
