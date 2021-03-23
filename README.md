@@ -125,20 +125,18 @@
     - GitHub Pages
     - Node.js
     - HTML5, CSS, JS
-- Techniques:
-  -  
 
 2. Software Documentation
-- A full breakdown of the reasoning behind choice of method, tools, and techniques to follow:
-    - tentative
+- This repo will serve as the site for software documention. 
+- Being that Agile developent is in use, a lot of just-in-time will be used.
+  - This repo will be updated with any new documentation as they are created throughout the lifescycle of this project
 3. Project Support Functions
 - Plan to ensure quality assurance:
-    - Tentative: Establishing an email link for consumers to provide feedback
-- (?) Configuration management plan (IEEE Std 1042)
-    - Tentative
+  - Tester individuals will be used to run the system individually and I will document their findings throughout their usage time in a document to come.
 - Verification and Validation plan
-    - Tentative: Some mechanism to record and report system failures as they occur
-
+    - Error testing thoughout each iteration
+    - Regularly checking in on Yelp's API health to ensure on status
+    - Regularly testing host site link(s) to make sure site is live 
 #### Description of Work Packages
 1. Work Breakdown Structure(WBS):
 - Tentative:
