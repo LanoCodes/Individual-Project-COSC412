@@ -73,7 +73,7 @@
 #### Project Organization
 1. Process Model
   - Agile process model
-    - ![Agile Development Diagram](https://user-images.githubusercontent.com/69657272/112192422-4fee9080-8bdd-11eb-8f2e-a64335fce865.png)
+  ![Agile Development Diagram](https://user-images.githubusercontent.com/69657272/112192422-4fee9080-8bdd-11eb-8f2e-a64335fce865.png)
 
 2. Organizational Structure
 - Delano Powell, student, is in charge of all project facets. 
@@ -139,8 +139,8 @@
     - Regularly testing host site link(s) to make sure site is live 
 #### Description of Work Packages
 1. Work Breakdown Structure(WBS):
-- Tentative:
-2. Dependencies Between Tasks
-- Tentative:
+  - ![WBS](https://user-images.githubusercontent.com/69657272/112224956-6fe47b00-8c02-11eb-8a75-80ccd99d1a50.png)
+2. Dependencies Between Tasks:
+  - 
 
 
