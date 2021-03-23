@@ -141,6 +141,6 @@
 1. Work Breakdown Structure(WBS):
   - ![WBS](https://user-images.githubusercontent.com/69657272/112224956-6fe47b00-8c02-11eb-8a75-80ccd99d1a50.png)
 2. Dependencies Between Tasks:
-  - 
+  - Testing tasks are all dependent on completion of Implementation tasks
 
 
