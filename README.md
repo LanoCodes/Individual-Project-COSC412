@@ -1,8 +1,3 @@
-### Purpose: 
->*The purpose of this project is to be able to use this program to make an immediate choice for fast restaurant choosing, no matter your location..*
-
-
-
 ### Requirements: 
 1. The user should be able to press a button to generate a restaurant in one click/touch.
 2. Interface should be very simply designed and very streamlined in presenting the restaurant information.
@@ -16,9 +11,9 @@
 | Name           |  Input Location |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ID             | uc01  |
-| Description    | The user will input their location in city, state-abrreviation format |
-| Triggers       | User choosing to input a location, rather than being geolocated |
-| Postconditions | User's location and data will then be used to generate the restaurant|
+| Description    | The user will input their location in a city, state-abrreviation format |
+| Triggers       | User choosing to input a location, rather than just being geolocated by the system|
+| Postconditions | User's location data will then be used to generate the restaurant|
 | Main Course    | System prompts the user to enter a location from which to generate a restaurant from.            |
 
 | Name           | Generate a Restaurant                                                                                                                |
@@ -27,15 +22,15 @@
 | Description    | The user prompts the system to begin generation of the restaurant                                                                         |
 | Triggers       | Clicking button that indicates initiation of roulette       |
 | Postconditions | System will have prepared a generated restaurant for the user to view                                                                     |
-| Main Course    | System prompts the user to enter their address User fills out all of the necessary information System temporarily stores user information |
+| Main Course    | System presents a button that will serve to initiate restaurant generation for the user |
 
 | Name           | Access Yelp Page of Generated Restaurant                                                                                           |
 |----------------|----------------------------------------------------------------------------------------------------------------|
 | ID             | uc03                                                                                                           |
 | Description    | The system will give users a clickable link to access Yelp page of restaurant that was generated                       |
-| Triggers       | Opening the app                                                                                                |
-| Postconditions | User’s email address information is now able to used when sending confirmation details                         |
-| Main Course    | System prompts the user to enter their email. User inputs the email System temporarily stores user information |
+| Triggers       | Restaurant being generated                                                                                                |
+| Postconditions | User will now have option to view yelp page of the generated restaurabt in its entirety                         |
+| Main Course    | System displays link upon generation of resataurant which will take the user to the Yelp page once clicked |
 
 
 
@@ -53,21 +48,20 @@
 
 #### Introduction
 1. Project Overview
->The purpose of this system is to be able to make a very quick purchase, with particular focus being pointed at purchasing footwear. Not intended to be a “catch-all," being able to hit any site, but this project is aimed at implementing a system that allows for a purchase of a shoe from some specific site not yet determined
+>The purpose of this system is to be able to take the fuss out of picking a new place to ea and give the user a restaurant nearby that they "must" go to. It will not allow the user to choose any preferences about the restaurant beforehand, such as the type of food served, whether or not it has a bar, etc. Instead, the user's location will be determined, or the user will specify a city and and have a restaurant be picked for them.
 2. Project Deliverables
 - All items to be delivered, including delivery dates and location
 - Items to be delivered:
     -  Class Diagram
     -  Use Cases
     -  Tool Rundown
-    -  Estimated costs breakdown
-    -  Cost(s) to consumer
     -  Cost(s) to build
 3. Evolution of the SPMP
-- Should it become unlawful to develop the system:
-    -  The project should pivot from being software that aims to make an immediate pivot in redesign and refocus to another purpose entirely
+- Should the system be a success and more features/pivots in function become wanted:
+    -  
 - If costs to run/host/test project becomes exorbitant:
-    -  Update professor immediately and seek alternative demonstration methods to alleviate burden
+    -  Update professor immediately and seek alternative demonstration methods to alleviate burden. Though, being the GitHub offers the ability to host projects, this may not be a major concern.
+  
 
 4. Reference Materials 
 - Tentative:
@@ -81,49 +75,58 @@
 
 #### Project Organization
 1. Process Model
-- Tenative:
-    - Waterfall process model
-    - ![Waterfall Model Diagram](https://user-images.githubusercontent.com/69657272/110476482-04ea5e80-80b0-11eb-9746-55462d44a335.png)
+  - Agile process model
+    - ![Agile Development Diagram](https://user-images.githubusercontent.com/69657272/112192422-4fee9080-8bdd-11eb-8f2e-a64335fce865.png)
 
 2. Organizational Structure
-- Product Owner, Project Manager, Developer, & Tester: Delano Powell
+- Delano Powell, student, is the one in charge project facets. 
+  - Reports to course professor, as this project is in development on assignment for school
+- General Project oversight comes from the Professor
 
 3. Organizational Interfaces
-- Tentative:
-    - Name of Hosting Platform:
+- GitHub 
+  - GihHub is the proposed hosting service 
+- Yelp
+  -  Yelp is the provider for the API that will be used for the core of this project
 
 4. Project Responsibilities
-- Delano Powell is in charge of most, if not all, responsibilities associated with this project
+- Delano Powell is in charge of all duties, deliverables, and project overall
 
 #### Managerial Process
 1. Management Objectives
 - Management Philosophy:
-    - Make a commitment to do the best job possible in the time allotted
-    - Personal accountability should be the root of everything done
-    - Honesty is the best policy, be realistic about project standings
+    - Committed to doing the best job possible in the time allotted
+    - Personal accountability should be the root of everything done throughout the project
+    - Meet mistakes/errors often as necessary, early.
 
 2.  Assumptions, Dependencies, and Constraints
-- External constraints:
-    - The system may be subjected to defences towards this type of project on various site(s) the project may target, and navigating those defences may be questionable legality
-    - Time constraints, the idea of the project in full, really is a fully fledged one. That stated, while the 2-month timeframe may prove ambitious to be fully rolled out and bug-free. Striving towards it is the goal in mind
+  - Constraints:
+    - There will be limit on how many times the app will be able to run using my personal credentials when the app is live. However, the amount of people exposed to this app will likely only spread to everyone in class at most. That is well within range for demonstration.
+  - Dependencies: 
+    - The app is entirely dependent on Yelp's Fusion API. Should that crash/fail, there will bbe no alternative.
 
 3. Risk Management
-- Tentative:
+- Scope Creep:
+  -  In an effort to mitigate potential scope creep, I will strive for an agile process that truly refuses to tack on new features until the project has completed a working iteration.
 
 4. Monitoring and Controlling Mechanisms
-- Tentative:
+- Gantt Chart:
+  -  The Gantt Chart for this project will be the primary mode of tracking progress and controlling development rate
 
 5. Staffing Plan
-- Sole responsibility belongs to Delano Powell
+- As mentioned, all positions relevant to this project is the sold responsibility of Delano Powell
+  -  Staff total: 1
+    -  Staff: Delano Powell
 
 #### Technical Process
 1. Methods, Tools, and Techniques
-- Methods:
-    - tentative
 - Tools: 
-    - tentative
-- Techniques: 
-    - tentative
+    - Yelp's Fusion API
+    - GitHub Pages
+    - Node.js
+    - HTML5, CSS, JS
+- Techniques:
+  -  
 
 2. Software Documentation
 - A full breakdown of the reasoning behind choice of method, tools, and techniques to follow:
