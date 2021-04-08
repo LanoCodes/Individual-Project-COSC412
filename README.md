@@ -122,9 +122,11 @@
 1. Methods, Tools, and Techniques
 - Tools: 
     - Yelp's Fusion API
-    - GitHub Pages
+    - GitHub Pages *Tentative/Finding alternative*
     - Node.js
     - HTML5, CSS, JS
+    - Bootstrap
+    - *Tentative* Heroku
 
 2. Software Documentation
 - This repo will serve as the site for software documention. 
