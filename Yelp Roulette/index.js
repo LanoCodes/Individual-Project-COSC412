@@ -2,6 +2,9 @@
 
 const yelp = require('yelp-fusion');
 
+// To solve console error "require is not defined, im going to switch to importing before trying a solution like browserify"
+// import yelp from 'yelp-fusion';
+
 // NOTE: You cannot host this with this js so in the open look inot hosting and heroku and all that. You have a resource open to look into that
 const apiKey = 'vLzyQTRqQDqHsBkOBQIaqdEKsMwQ0qdTEMUywcxlc3BFBKThPKjmmyfn2cfUCE0lwC_gwkeBrpZgBRkeHjcShe6wHBJpLbqskfmDios0JpnXpsBJ3NwLKir0HJVKYHYx';
 // NOTE: YOUR KEY HERE... this is just for me to be able to post to github quickly and without my api key being out in the wild
@@ -31,22 +34,32 @@ var rando = Math.floor(Math.random() * (21 - 0)) + 0;
 // NOTE: this is just code for me to test random number generation and see output in console
 // console.log(rando);
 
+//this is my test of the function to be called from within index.html
 function yelpRoulette() {
+  // NOTE: this is a copy of above in case it goes wrong when trying to encase this all in a function
+  client.search(searchRequest).then(response => {
+    // NOTE: Below where  it says .jsonBody.businesses[0] {{now response.jsonBody.businesses[rando]}}, that zero is indicating the first result in a list of results that aregiven from the after the request has been made
 
+    // NOTE: Fusion docs says that it returns up to a 1000 business based on the search criteria. So, assuming that the criteria given allows for a full response with 1000 restaurants to choose from, the bounds for a random integer creater is from 0 - 999
+    const firstResult = response.jsonBody.businesses[rando];
+    const prettyJson = JSON.stringify(firstResult, null, 4);
+    // instead of logging to console like i did in testing.. im going to using .innerHTML and see what happens.
+    // I will need to first enclose the api call in one function to be able to call on this from index.html..
+    // console.log(prettyJson);
+    // this line may be become very necessary once i get the function properly structured
+    document.getElementById("show-roulette").innerHTML = prettyJson;
+  }).catch(e => {
+    console.log(e);
+  });
 }
 
-// NOTE: this is a copy of above in case it goes wrong when trying to encase this all in a function
-client.search(searchRequest).then(response => {
-  // NOTE: Below where  it says .jsonBody.businesses[0] {{now response.jsonBody.businesses[rando]}}, that zero is indicating the first result in a list of results that aregiven from the after the request has been made
 
-  // NOTE: Fusion docs says that it returns up to a 1000 business based on the search criteria. So, assuming that the criteria given allows for a full response with 1000 restaurants to choose from, the bounds for a random integer creater is from 0 - 999
-  const firstResult = response.jsonBody.businesses[rando];
-  const prettyJson = JSON.stringify(firstResult, null, 4);
-  // instead of logging to console like i did in testing.. im going to using .innerHTML and see what happens.
-  // I will need to first enclose the api call in one function to be able to call on this from index.html..
-  // console.log(prettyJson);
-  // this line may be become very necessary once i get the function properly structured
-  document.getElementById("show-roulette").innerHTML = prettyJson;
-}).catch(e => {
-  console.log(e);
-});
+// NOTE: I saw this on stack overflow. Maybe i can incorporate this into my page after everything else gets sorted
+// I most likely need to get my own API key for the google maps
+//"FUNCTION TO LOAD THE GOOGLE MAPS API"
+// function loadScript() {
+//     var script  = document.createElement("script");
+//     script.type = "text/javascript";
+//     script.src  = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCDZpAoR25KSkPTRIvI3MZoAg1NL6f0JV0&sensor=false&callback=initialize";
+//     document.body.appendChild(script);
+// }
