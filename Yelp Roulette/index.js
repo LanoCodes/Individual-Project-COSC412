@@ -10,6 +10,7 @@ const apiKey = 'vLzyQTRqQDqHsBkOBQIaqdEKsMwQ0qdTEMUywcxlc3BFBKThPKjmmyfn2cfUCE0l
 var userLoc = document.getElementById("userLocation");
 // You can output to the document in the similar way... using .innerHTML... maybe!
 
+
 const searchRequest = {
   // NOTE: latitude and longitude are only needed if location: 'xyz', is not provided get that from the user!
   term: 'restaurants',
@@ -41,9 +42,11 @@ client.search(searchRequest).then(response => {
   // NOTE: Fusion docs says that it returns up to a 1000 business based on the search criteria. So, assuming that the criteria given allows for a full response with 1000 restaurants to choose from, the bounds for a random integer creater is from 0 - 999
   const firstResult = response.jsonBody.businesses[rando];
   const prettyJson = JSON.stringify(firstResult, null, 4);
-  console.log(prettyJson);
-  // NOTE: below is testing to see if i can get through prettyJson onto the actual page
-  // document.getElementById("show-roulette").innerHTML = prettyJson;
+  // instead of logging to console like i did in testing.. im going to using .innerHTML and see what happens.
+  // I will need to first enclose the api call in one function to be able to call on this from index.html..
+  // console.log(prettyJson);
+  // this line may be become very necessary once i get the function properly structured
+  document.getElementById("show-roulette").innerHTML = prettyJson;
 }).catch(e => {
   console.log(e);
 });
