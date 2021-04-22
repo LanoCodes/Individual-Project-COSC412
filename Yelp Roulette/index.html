@@ -22,54 +22,58 @@
   <script src="https://kit.fontawesome.com/5f8913b479.js" crossorigin="anonymous"></script>
 
   <!-- External JS for doing the the roulette -->
-  <script type="text/javascript" src="index.js"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
-  <section id="title">
+  <form>
+    <section id="title">
 
-    <div class="container-fluid">
+      <div class="container-fluid">
 
-      <!-- Nav bar with a the name of the app as well as a couple inks to yelp  -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href=""><img class="roulette-img" src="images/casino-roulette.svg" alt="casino-wheel-drawing"> Yelp Roulette <img class="yelp-logo-img" src="images/yelp-svg.svg" alt="yelp-logo-drawing"></a>
+        <!-- Nav bar with a the name of the app as well as a couple inks to yelp  -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href=""><img class="roulette-img" src="images/casino-roulette.svg" alt="casino-wheel-drawing"> Yelp Roulette <img class="yelp-logo-img" src="images/yelp-svg.svg" alt="yelp-logo-drawing"></a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.yelp.com/">Yelp</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Nightlife</a>
-            </li>
-          </ul>
-        </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.yelp.com/">Yelp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.yelp.com/nearme/nightlife">Nightlife</a>
+              </li>
+            </ul>
+          </div>
 
-      </nav>
+        </nav>
 
-      <!-- Title -->
-      <div class="row">
-        <div class="col-lg-6">
-          <h1>Welcome to Yelp Roulette. Place your bet!</h1>
-          <button type="button" class="btn btn-dark btn-lg roulette-button" onclick="yelpRoulette()"><i class="fab fa-yelp"></i> Roulette!</button>
-        </div>
+        <!-- Title -->
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>Welcome to Yelp Roulette. Place your bet!</h1>
+            <input id="userLocation" class="form-control" type="text" placeholder="Enter city" aria-label="default input example">
+            <button type="button" class="btn btn-dark btn-lg roulette-button" onclick="yelpRoulette()"><i class="fab fa-yelp"></i> Roulette!</button>
+          </div>
 
-        <div class="col-lg-6">
-          <h2>Look for your payout!</h2>
+          <div class="col-lg-6">
+            <h2>Look for your payout!</h2>
 
-          <!-- this will be for displaying the outout on button click! -->
-          <div id="show-roulette" class="roulette-output">
-
+            <!-- this will be for displaying the outout on button click! -->
+            <div id="show-roulette" class="roulette-output">
+              test
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
+  </form>
+
 
   <!-- Footer -->
 
