@@ -54,6 +54,10 @@
     -  Class Diagram
     -  Use Cases
     -  Tool Rundown
+    -  Mock up of site
+    -  Bootstrap rendition of the site
+    -  Connection etablished to Yelp's Fusion API
+    -  Successful in-site test of core function; display a result from Fusion
 3. Evolution of the SPMP
 - Should the system be a success and more features/pivots in function become wanted:
     -  The plan will than be reworked and then be based on an already running system, rather than as a project being built from the ground up
@@ -64,6 +68,7 @@
 4. Reference Materials 
 - [Yelp's development portal](https://www.yelp.com/developers)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [Browserify's README](https://github.com/browserify/browserify)
 
 5. Definition and Acronyms
 - SPMP: Software Project Management Plan
@@ -127,6 +132,8 @@
     - HTML5, CSS, JS
     - Bootstrap
     - *Tentative* Heroku
+    - Namecheap
+    - Browserify
 
 2. Software Documentation
 - This repo will serve as the site for software documention. 
