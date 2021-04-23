@@ -134,6 +134,7 @@
     - *Tentative* Heroku
     - Namecheap
     - Browserify
+    - NodeJS & npm
 
 2. Software Documentation
 - This repo will serve as the site for software documention. 
