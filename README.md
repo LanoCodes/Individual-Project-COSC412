@@ -58,6 +58,11 @@
     -  Bootstrap rendition of the site
     -  Connection etablished to Yelp's Fusion API
     -  Successful in-site test of core function; display a result from Fusion
+      -  Milestones: 
+        - Have mockup copleted: 4/9
+        - Have bootstrap rendition made: 4/12
+        - Get output squared away & user friendly: 4/28
+        - Have site hosted & up: 4/30
 3. Evolution of the SPMP
 - Should the system be a success and more features/pivots in function become wanted:
     -  The plan will than be reworked and then be based on an already running system, rather than as a project being built from the ground up
@@ -116,7 +121,7 @@
 
 4. Monitoring and Controlling Mechanisms
 - Gantt Chart:
-  -  The [Gantt Chart]() for this project will be the primary mode of tracking progress and controlling development rate
+  -  The [Gantt Chart](https://app.clickup.com/8645017/v/g/6-65360568-7?pr=14764423) for this project will be the primary mode of tracking progress and controlling development rate 
 
 5. Staffing Plan
 - As mentioned, all positions relevant to this project is the sole responsibility of Delano Powell
