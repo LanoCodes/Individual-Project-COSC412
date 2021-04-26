@@ -23,12 +23,13 @@
 
   <!-- External JS for doing the the roulette -->
   <!-- <script src="index.js"></script> -->
+  <script type="text/javascript" src="dist/bundle.js"></script>
 </head>
 
 <!-- NOTE: You might put a browserify script here to help out with the calling of yelp API -->
 
 <body>
-  <script src="./dist/bundle.js"type="text/javascript"></script>
+  <!-- <script type="text/javascript" src="./dist/bundle.js"></script> -->
   <form>
     <section id="title">
 
@@ -60,7 +61,13 @@
           <div class="col-lg-6">
             <h1>Welcome to Yelp Roulette. Place your bet!</h1>
             <input id="userLocation" class="form-control" type="text" placeholder="Enter city" aria-label="default input example">
-            <button type="button" class="btn btn-dark btn-lg roulette-button" onclick="yelpRoulette()"><i class="fab fa-yelp"></i> Roulette!</button>
+            <!-- This is seen by the application, but not when used externally..why? -->
+            <script type="text/javascript">
+              function yelpRoulette(){
+                 document.getElementById("show-roulette").innerHTML = "TEST TEST TEST";
+              }
+            </script>
+            <button id="btn" type="button" class="btn btn-dark btn-lg roulette-button" onclick="yelpRoulette()"><i class="fab fa-yelp"></i> Roulette!</button>
           </div>
 
           <div class="col-lg-6">
