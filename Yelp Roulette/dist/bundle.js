@@ -70,15 +70,15 @@ const _defaultResponseFilters = require('./default-response-filters');
 const _processFilters = require('./process-filters');
 
 const send = (request, requestFilters, responseFilters) => {
-  
+
   if(!requestFilters){
     requestFilters = _defaultRequestFilters();
   }
-  
+
   if(!responseFilters){
     responseFilters = _defaultResponseFilters();
   }
-  
+
   return _smallRequest.send(_processFilters(request, requestFilters)).then(response => {
     return _processFilters(response, responseFilters);
   });
@@ -93,7 +93,7 @@ const processFilters = (context, filters) => {
   for(let filter of filters){
     context = filter.filter(context);
   }
-  
+
   return context;
 };
 
@@ -104,11 +104,11 @@ module.exports = processFilters;
 const _headers = require('../headers');
 
 const filter = (request) => {
-  
+
   if(request.bearerToken){
     _headers.setHeader(request, 'Authorization', 'Bearer ' + request.bearerToken);
   }
-  
+
   return request;
 };
 
@@ -142,10 +142,10 @@ const contentType = 'application/json';
 const filter = (request) => {
   if(request.jsonBody){
     request.body = JSON.stringify(request.jsonBody);
-    
+
     _headers.setContentTypeIfNotExist(request, contentType);
   }
-  
+
   return request;
 };
 
@@ -159,13 +159,13 @@ const _url = require('url');
 
 const filter = (request) => {
   const url = _url.parse(request.url);
-    
+
   if(request.query){
     url.query = request.query;
   }
-  
+
   request.url = _url.format(url);
-  
+
   return request;
 };
 
@@ -181,16 +181,16 @@ const _url = require('url');
 const filter = (request) => {
   if(request.urlParams){
     const encodedParams = {};
-    
+
     for(let key in request.urlParams){
       encodedParams[key] = encodeURIComponent(request.urlParams[key]);
     }
-    
+
     request.url = _stringTemplate(request.url, encodedParams);
   }
-  
+
   request.url = _url.format(_url.parse(request.url));
-  
+
   return request;
 };
 
@@ -207,13 +207,13 @@ const _headers = require('../headers');
 const contentType = 'application/x-www-form-urlencoded';
 
 const filter = (request) => {
-  
+
   if(request.urlencodedBody){
-    
+
     request.body = _querystring.stringify(request.urlencodedBody);
     _headers.setContentTypeIfNotExist(request, contentType);
   }
-  
+
   return request;
 };
 
@@ -228,7 +228,7 @@ const filter = (response) => {
     response.jsonBody = JSON.parse(response.body);
   } catch(e){
   }
-  
+
   return response;
 };
 
@@ -543,7 +543,7 @@ const send = (requestModel) => {
 
       if(requestModel.socketTimeout){
         clientRequest.on('socket', function (socket) {
-          socket.setTimeout(requestModel.socketTimeout);  
+          socket.setTimeout(requestModel.socketTimeout);
           socket.on('timeout', function() {
             clientRequest.destroy();
           });
@@ -557,8 +557,8 @@ const send = (requestModel) => {
       if(requestModel.body){
         clientRequest.write(requestModel.body);
       }
-      
-      clientRequest.end();    
+
+      clientRequest.end();
     } catch(e){
       reject(e);
     }
@@ -575,7 +575,7 @@ const toRequestOptions = (requestModel) =>{
 
   const optionsFromUrl = _url.parse(requestModel.url);
   const options = Object.assign({}, optionsFromUrl, requestModel);
-  
+
   return options;
 };
 
@@ -627,12 +627,12 @@ class YelpClient {
   constructor(apiKey, options){
     this.apiKey = apiKey;
     this.options = {};
-    
+
     if(typeof options !== 'undefined'){
       this.options = options;
     }
   }
-  
+
   send(requestOptions){
     const combinedOptions = Object.assign({}, requestOptions, this.options);
     return _send(combinedOptions);
@@ -751,8 +751,27 @@ var rando = Math.floor(Math.random() * (21 - 0)) + 0;
 
 //  To mitigate the risk of failure, I am going to limit the range from 0 - 1000, to 0 - 20. That should cover a good amount of restaurants thrown back while giving the user a good enough randomization!
 
-// NOTE: this is just code for me to test random number generation and see output in console
-// console.log(rando);
+// Test to fix yelpRoulette() not being not defined at HTMLButtonElement.onclick when run
+
+// var lanosBtn = document.getElementById("btn");
+// lanosBtn.addEventListener("click", function yelpRoulette() {
+//   // NOTE: this is a copy of above in case it goes wrong when trying to encase this all in a function
+//   client.search(searchRequest).then(response => {
+//     // NOTE: Below where  it says .jsonBody.businesses[0] {{now response.jsonBody.businesses[rando]}}, that zero is indicating the first result in a list of results that aregiven from the after the request has been made
+//
+//     // NOTE: Fusion docs says that it returns up to a 1000 business based on the search criteria. So, assuming that the criteria given allows for a full response with 1000 restaurants to choose from, the bounds for a random integer creater is from 0 - 999
+//     const firstResult = response.jsonBody.businesses[rando];
+//     const prettyJson = JSON.stringify(firstResult, null, 4);
+//     // instead of logging to console like i did in testing.. im going to using .innerHTML and see what happens.
+//     // I will need to first enclose the api call in one function to be able to call on this from index.html..
+//     // console.log(prettyJson);
+//     // this line may be become very necessary once i get the function properly structured
+//     document.getElementById("show-roulette").innerHTML = prettyJson;
+//   }).catch(e => {
+//     console.log(e);
+//   });
+// }, false);
+
 
 //this is my test of the function to be called from within index.html
 function yelpRoulette() {
@@ -6160,7 +6179,7 @@ var IncomingMessage = exports.IncomingMessage = function (xhr, response, mode, r
 		self.url = response.url
 		self.statusCode = response.status
 		self.statusMessage = response.statusText
-		
+
 		response.headers.forEach(function (header, key){
 			self.headers[key.toLowerCase()] = header
 			self.rawHeaders.push(key, header)
