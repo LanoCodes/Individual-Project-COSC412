@@ -638,9 +638,13 @@ class YelpClient {
     return _send(combinedOptions);
   };
 
+  // NOTE: Testing to see if cors problem is now fixed after creating my own, cors-anywhere proxy
   search(parameters){
     return this.send({
-      url: 'https://api.yelp.com/v3/businesses/search',
+      // NOTE: Here is the original code. Revert to this if necessary
+      // url: 'https://api.yelp.com/v3/businesses/search',
+      // Here I added the url to my cors-anywhere proxy server before the url to the Fusion endpoint to solver the cors error
+      url: 'https://lanoscorsproxy.herokuapp.com/https://api.yelp.com/v3/businesses/search',
       query: parameters,
       bearerToken: this.apiKey
     });
@@ -734,6 +738,7 @@ var userLoc = document.getElementById("userLocation");
 // You can output to the document in the similar way... using .innerHTML... maybe!
 
 
+
 const searchRequest = {
   // NOTE: latitude and longitude are only needed if location: 'xyz', is not provided get that from the user!
   term: 'restaurants',
@@ -791,6 +796,9 @@ function yelpRoulette() {
     console.log(e);
   });
 }
+//testing a quick and dirty fix?
+//This led to another NEW error, BUT it appears that this helped th orginal problem of the function yelpRoulette not being seen by index.html
+window.yelpRoulette = yelpRoulette
 
 },{"yelp-fusion":23}],25:[function(require,module,exports){
 (function (global){(function (){
